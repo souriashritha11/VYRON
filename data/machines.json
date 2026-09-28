@@ -1,0 +1,50 @@
+[
+  {
+    "id": "M-101",
+    "name": "Industrial Cooling Unit",
+    "location": "Factory A",
+    "status": "normal"
+  },
+  {
+    "id": "M-102",
+    "name": "Air Compressor",
+    "location": "Factory A",
+    "status": "normal"
+  },
+  {
+    "id": "M-103",
+    "name": "Hydraulic Pump",
+    "location": "Factory B",
+    "status": "warning"
+  },
+  {
+    "id": "M-104",
+    "name": "Industrial Cooling Unit",
+    "location": "Factory A",
+    "status": "warning"
+  },
+  {
+    "id": "M-105",
+    "name": "Conveyor Motor",
+    "location": "Factory B",
+    "status": "normal"
+  },
+  {
+    "id": "M-106",
+    "name": "Diesel Generator",
+    "location": "Factory C",
+    "status": "normal"
+  },
+  {
+    "id": "M-107",
+    "name": "Water Pump",
+    "location": "Factory C",
+    "status": "normal"
+  },
+  {
+    "id": "M-108",
+    "name": "CNC Machine",
+    "location": "Factory D",
+    "status": "normal"
+  }
+]
