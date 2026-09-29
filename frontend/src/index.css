@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+/* ============================================
+   DESIGN TOKENS & THEMES
+============================================ */
+:root, [data-theme="batman"] {
+  --font-body: "Inter", sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sub: "Rajdhani", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* === BATMAN PALETTE === */
+  --black:        #000000;
+  --bg-void:      #060608;
+  --bg-deep:      #09090d;
+  --bg-surface:   #0d0d12;
+  --bg-card:      rgba(10, 10, 16, 0.94);
+  --bg-glass:     rgba(255, 255, 255, 0.02);
+
+  /* Gold / Yellow — the bat-signal */
+  --gold:           #F5C518;
+  --gold-bright:    #FFD740;
+  --gold-dim:       #C49A0A;
+  --gold-glow:      rgba(245, 197, 24, 0.18);
+  --gold-trace:     rgba(245, 197, 24, 0.06);
+  --gold-border:    rgba(245, 197, 24, 0.22);
+
+  /* Dark Steel */
+  --steel:        #1C1C24;
+  --steel-mid:    #252530;
+  --steel-light:  #32323F;
+
+  /* Status */
+  --danger:       #FF3B3B;
+  --danger-glow:  rgba(255, 59, 59, 0.2);
+  --warn:         #FF8C00;
+  --warn-glow:    rgba(255, 140, 0, 0.2);
+  --safe:         #4CAF76;
+  --safe-glow:    rgba(76, 175, 118, 0.18);
+  --purple:       #7B2FBE;
+  --purple-glow:  rgba(123, 47, 190, 0.2);
+
+  /* Borders */
+  --border-ghost:   rgba(255, 255, 255, 0.04);
+  --border-dim:     rgba(255, 255, 255, 0.08);
+  --border-gold:    rgba(245, 197, 24, 0.22);
+  --border-steel:   rgba(50, 50, 63, 0.6);
+
+  /* Text */
+  --text-primary:   #F0EDD8;
+  --text-secondary: rgba(220, 210, 180, 0.72);
+  --text-muted:     rgba(140, 130, 100, 0.6);
+  --text-gold:      var(--gold);
+
+  /* Shadows */
+  --shadow-card:    0 8px 50px rgba(0, 0, 0, 0.7);
+  --shadow-gold:    0 0 30px rgba(245, 197, 24, 0.15);
+  --shadow-inner:   inset 0 1px 0 rgba(255,255,255,0.04);
+  --shadow-deep:    0 20px 80px rgba(0, 0, 0, 0.8);
+
+  /* Watermark */
+  --watermark-color: rgba(245, 197, 24, 0.035);
+  --watermark-stroke: rgba(245, 197, 24, 0.07);
+
+  /* Radius */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast:   140ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   240ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   380ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 480ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* === LIGHT THEME === */
+[data-theme="light"] {
+  --bg-void:      #f0f3fa;
+  --bg-deep:      #f8fafc;
+  --bg-surface:   #ffffff;
+  --bg-card:      rgba(255, 255, 255, 0.94);
+  --bg-glass:     rgba(0, 0, 0, 0.03);
+
+  --gold:           #2563eb;
+  --gold-bright:    #3b82f6;
+  --gold-dim:       #1d4ed8;
+  --gold-glow:      rgba(37, 99, 235, 0.14);
+  --gold-trace:     rgba(37, 99, 235, 0.05);
+  --gold-border:    rgba(37, 99, 235, 0.25);
+
+  --steel:        #e2e8f0;
+  --steel-mid:    #cbd5e1;
+  --steel-light:  #94a3b8;
+
+  --border-ghost:   rgba(0, 0, 0, 0.06);
+  --border-dim:     rgba(0, 0, 0, 0.1);
+  --border-gold:    rgba(37, 99, 235, 0.25);
+  --border-steel:   rgba(203, 213, 225, 0.8);
+
+  --text-primary:   #0f172a;
+  --text-secondary: #334155;
+  --text-muted:     #64748b;
+  --text-gold:      #2563eb;
+
+  --shadow-card:    0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-gold:    0 0 25px rgba(37, 99, 235, 0.15);
+  --shadow-deep:    0 20px 40px rgba(0, 0, 0, 0.08);
+
+  --watermark-color: rgba(37, 99, 235, 0.04);
+  --watermark-stroke: rgba(37, 99, 235, 0.08);
+}
+
+/* === DARK TECH THEME === */
+[data-theme="dark"] {
+  --bg-void:      #080c14;
+  --bg-deep:      #0b1220;
+  --bg-surface:   #101a2d;
+  --bg-card:      rgba(16, 26, 45, 0.94);
+  --bg-glass:     rgba(0, 212, 255, 0.03);
+
+  --gold:           #00d4ff;
+  --gold-bright:    #38bdf8;
+  --gold-dim:       #0284c7;
+  --gold-glow:      rgba(0, 212, 255, 0.16);
+  --gold-trace:     rgba(0, 212, 255, 0.06);
+  --gold-border:    rgba(0, 212, 255, 0.25);
+
+  --steel:        #1e293b;
+  --steel-mid:    #334155;
+  --steel-light:  #475569;
+
+  --border-ghost:   rgba(255, 255, 255, 0.05);
+  --border-dim:     rgba(255, 255, 255, 0.1);
+  --border-gold:    rgba(0, 212, 255, 0.25);
+  --border-steel:   rgba(51, 65, 85, 0.8);
+
+  --text-primary:   #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted:     #64748b;
+  --text-gold:      #00d4ff;
+
+  --shadow-card:    0 10px 40px rgba(0, 0, 0, 0.6);
+  --shadow-gold:    0 0 30px rgba(0, 212, 255, 0.18);
+  --shadow-deep:    0 20px 60px rgba(0, 0, 0, 0.7);
+
+  --watermark-color: rgba(0, 212, 255, 0.03);
+  --watermark-stroke: rgba(0, 212, 255, 0.07);
+}
+
+/* ============================================
+   RESET & BASE
+============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+button       { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, textarea, select { font-family: inherit; outline: none; }
+
+/* ============================================
+   SCROLLBAR
+============================================ */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: var(--bg-void); }
+::-webkit-scrollbar-thumb  {
+  background: var(--gold-border);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ============================================
+   BACKGROUND WATERMARK ("VYRON")
+============================================ */
+.vyron-watermark {
+  position: fixed;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-family: var(--font-display);
+  font-size: clamp(140px, 28vw, 360px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--watermark-color);
+  -webkit-text-stroke: 2px var(--watermark-stroke);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  white-space: nowrap;
+  transition: color 400ms ease, -webkit-text-stroke 400ms ease;
+}
+
+/* ============================================
+   UTILITIES
+============================================ */
+.text-gold    { color: var(--gold); }
+.text-danger  { color: var(--danger); }
+.text-warn    { color: var(--warn); }
+.text-safe    { color: var(--safe); }
+.text-muted   { color: var(--text-muted); }
+.text-mono    { font-family: var(--font-mono); }
